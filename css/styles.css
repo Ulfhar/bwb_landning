@@ -135,15 +135,18 @@ footer {
     width: 100%;
 }
 
-.slogan-container {
-    background-image: url('images/landscape_1.png');
+  .slogan-container {
+    background-image: url('../images/landscape_1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
     text-align: center;
     padding: 500px 0;
-}
+} 
+
+
+
 
 .slogan-text {
     font-size: 2em;
