@@ -1,3 +1,4 @@
+
 body, h1, p, ul, li {
     margin: 0;
     padding: 0;
@@ -8,6 +9,7 @@ body {
     line-height: 1.6;
     background-color: #000000;
     -webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -71,27 +73,8 @@ header nav a {
     transition: background-color 0.3s;
     font-family: 'Times New Roman', Times, serif;
 }
-/*
-.section-paper, .section-solid {
-    width: auto;
-    text-align: left;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-}*/
-/*
-.section-paper {
-	width: auto;
-    text-align: left;
-    background-size: cover;
-    background-position: center;
-    box-sizing: border-box;
-	
-    background-color: #000000;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-}*/
+
+
 .section-paper {
     width: auto;
     text-align: left;
@@ -99,7 +82,7 @@ header nav a {
     background-position: center;
     box-sizing: border-box;
     background-color: #000000;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     justify-content: space-between;
 }
@@ -128,12 +111,14 @@ header nav a {
     justify-content: center;
     align-items: left;
     text-align: left;
+				max-width: 100;
+	overflow-x: hidden;
 }
 
 .logo-container img {
     flex: 1;
     width: 900px;
-    padding: 10px;
+    padding: 0px;
 }
 
 .responsive-screenshot_1 {
@@ -280,6 +265,9 @@ footer {
 
     .text-container {
         font-size: 1em;
+max-width: 100%;
+		margin: 0;
+        padding: 0;
     }
 
     .slogan-container {
@@ -323,7 +311,23 @@ footer {
         right: 5%;
         width: 20px;
     }
-	
-	 {
 
+    /* Responsive changes for .section-paper */
+    .section-paper {
+        font-size: 0.8em; /* Adjust font size for mobile */
+        flex-direction: column-reverse; /* Change the order: image on top, text below */
+    }
+
+    .section-paper .text-container,
+    .section-paper .logo-container {
+        width: 100%; /* Take the full width of the container */
+        text-align: center; /* Center the text */
+		padding: 0px;
+    }
+
+    .section-paper .logo-container {
+        margin-bottom: 10px; /* Add some space between the image and the text */
+		padding: 0px;
+		
+    }
 }
