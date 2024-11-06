@@ -172,6 +172,29 @@ footer {
 
 
 
+.terms-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 8px;
+}
+
+    .terms-content h1 {
+        text-align: center;
+        color: #0a121c;
+    }
+
+    .terms-content p {
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #666;
+    }
+
+
+
+
     .dropdown-menu.show {
         display: block !important;
     }
