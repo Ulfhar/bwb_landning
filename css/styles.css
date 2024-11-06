@@ -109,6 +109,7 @@ header nav a {
     text-align: left;
     max-width: 100;
     overflow-x: hidden;
+    color: #d5af3f;
 }
 
 .logo-container img {
@@ -354,4 +355,15 @@ footer {
         margin-top: -100px; /* Adjust margin to center text better */
         padding: 10px 15px; /* Ensure padding around text scales */
     }
+
+    .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown-menu.show {
+        display: block;
+    }
+
+
+
 }
