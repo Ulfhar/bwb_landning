@@ -33,24 +33,19 @@ header {
 }
 
 .header-container {
-    max-width: 1700px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 90%; /* Ширина контейнера буде займати 90% від ширини екрана */
+    max-width: 1700px; /* Обмеження максимальної ширини для великих екранів */
+    margin: 0 auto; /* Центрує контейнер */
     display: flex;
     align-items: center;
-    padding: 0 30px;
-    width: 100%;
+    padding: 0 2vw; /* Адаптивні відступи залежно від ширини вікна */
     box-sizing: border-box;
 }
 
 .logo {
     width: 250px;
     height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 20px;
-    flex-shrink: 0;
+    object-fit: contain; /* Або `cover` для повного заповнення */
 }
 
 header nav ul {
@@ -109,7 +104,7 @@ header nav a {
     text-align: left;
     max-width: 100;
     overflow-x: hidden;
-    color: #d5af3f;
+    color: #e0e0e0;
 }
 
 .logo-container img {
@@ -142,18 +137,46 @@ footer {
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding: 500px 0;
 }
-
 .slogan-text {
+    position: relative;
     font-size: 2em;
-    color: #d5af3f;
+    color: #d1d1d1;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
     border-radius: 8px;
     display: inline-block;
     margin-top: -250px;
+    line-height: 1.1;
+    width: 80%; 
+    max-width: 600px; 
+}
+
+.corner-icon {
+    float: left;
+    margin-right: 10px;
+    width: 110px; 
+    height: auto;
+}
+
+    .slogan-text h3,
+    .slogan-text h4 {
+        margin: 1px 0;
+    }
+
+    .slogan-text h4 {
+        font-size: 0.6em;
+        color: #bababa;
+    }
+.slogan-text h5 {
+    font-size: 0.7em;
+    margin: 6px 0;
+    padding: 5px 10px; /* Відступи всередині для простору навколо тексту */
+    background-color: rgba(255, 255, 255, 0.12); /* Фон з прозорістю */
+    border-radius: 8px; /* Заокруглені краї */
+    display: inline-block; /* Обмежує фон тільки навколо тексту */
 }
 
 .mobile-nav {
