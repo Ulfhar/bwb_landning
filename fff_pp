@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Far-Far-Forest - Privacy Policy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p>Effective Date: 15/01/2025</p>
+        
+        <h2>1. Information We Collect</h2>
+        <p><strong>Automatically Collected Data:</strong></p>
+        <ul>
+            <li>Device Information: Device model, operating system, and unique device identifiers.</li>
+            <li>Gameplay Data: Level progress, in-game actions (e.g., where the player died, time spent on a level), and game preferences.</li>
+            <li>Country: Automatically detected based on your connection.</li>
+            <li>Crash Reports: Data on crashes and errors for improving performance.</li>
+        </ul>
+        <p><strong>Data from Third-Party Services:</strong></p>
+        <ul>
+            <li>Unity Analytics: For tracking in-game behavior and performance.</li>
+            <li>Unity Ads: (planned) For displaying in-game advertisements.</li>
+            <li>Unity Cloud Save: For storing game settings and progress (graphics, language preferences).</li>
+        </ul>
+        
+        <h2>2. How We Use Your Information</h2>
+        <ul>
+            <li>To improve gameplay experience and balance game mechanics.</li>
+            <li>To analyze user behavior for game development.</li>
+            <li>To provide personalized content and updates.</li>
+            <li>To deliver and manage in-game advertisements (when implemented).</li>
+            <li>To store and synchronize game progress across devices.</li>
+        </ul>
+
+        <h2>3. Sharing Your Information</h2>
+        <p>We do not share your personal data with third parties except:</p>
+        <ul>
+            <li>With Unity Technologies (Unity Analytics, Ads, and Cloud Save services).</li>
+            <li>When required by law.</li>
+        </ul>
+
+        <h2>4. Data Security</h2>
+        <p>We implement appropriate security measures to protect your data. However, no method of transmission over the internet is 100% secure.</p>
+
+        <h2>5. Children's Privacy</h2>
+        <p>Our Game is not directed to children under 13. We do not knowingly collect personal data from children.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us via our official Twitter page: <a href="#">https://x.com/Ulv_Bogdan</a></p>
+    </div>
+</body>
+</html>
