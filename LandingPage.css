@@ -83,6 +83,39 @@ body {
     text-align: center;
     padding: 20px;
 }
+.game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.game-screenshot img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.game-info {
+    text-align: center;
+    max-width: 600px;
+}
+
+    .game-info h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .game-info p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+.google-play-badge {
+    max-width: 200px;
+    height: auto;
+}
 
 @media (min-width: 768px) {
     .content {
@@ -138,5 +171,16 @@ body {
         .play-button:hover {
             background-color: #0044aa;
         }
+
+    .game-section {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .game-info {
+        text-align: left;
+    }
 
 }
