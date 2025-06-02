@@ -1,6 +1,6 @@
 .fixed-header {
     background-color: #000;
-    color: #fff;
+    color: #2e103f;
     position: fixed;
     top: 0;
     width: 100%;
@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px; /* або скільки хочеш */
+    max-width: 900px; 
     margin: 0 auto;
     padding: 20px;
 }
@@ -35,7 +35,7 @@
 }
 
     .header-nav a {
-        color: #aaa;
+        color: #f6dbff;
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s, text-shadow 0.3s;
