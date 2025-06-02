@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 60px; /* відступ, щоб контент не перекривався хедером */
+    padding-top: 0px; 
 }
 
 .fixed-header {
