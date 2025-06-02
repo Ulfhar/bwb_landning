@@ -9,19 +9,20 @@ body {
     background-color: #f3f3f3;
     color: #000;
 }
-
 .promo-0 {
-    display: none;
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    margin-bottom: 20px;
+  display: none;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 40px;
 }
+
 
 @media (max-width: 767px) {
     .promo-0 {
         display: block;
+        margin-top: 60px; 
     }
 }
 
