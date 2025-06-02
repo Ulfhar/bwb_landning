@@ -10,6 +10,21 @@ body {
     color: #000;
 }
 
+.promo-0 {
+    display: none;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .promo-0 {
+        display: block;
+    }
+}
+
 .page-inner {
     padding: 0 20px;
     max-width: 1200px;
@@ -247,10 +262,12 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-orient: vertical;
 }
 
-/* Адаптивна зміна порядку елементів для мобільних */
 @media (max-width: 767px) {
     .content {
         flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 
     .text-content {
@@ -260,12 +277,6 @@ h1, h2, h3, h4, h5, h6 {
     .content img {
         order: 2;
         width: 48%;
-    }
-
-    .content {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
     }
 }
 

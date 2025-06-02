@@ -15,11 +15,21 @@
     margin: 0 auto;
     padding: 20px;
 }
+.logo-img {
+    height: 40px; 
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
 
 @media (min-width: 1024px) {
     .header-top {
         padding: 20px 80px;
     }
+}
+
+.logo-img {
+    height: 50px;
 }
 
 .logo {
