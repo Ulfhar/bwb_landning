@@ -6,11 +6,14 @@ body {
     margin: 0;
 }
 
+
+
 .news-article {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px; /* тепер padding тут, а не в body */
+    padding: 80px 20px 0 20px;
 }
+
 
 .news-meta {
     color: #6a1b9a; /* фіолетовий */
@@ -90,3 +93,9 @@ body {
         max-width: 560px;
         height: 315px;
     }
+
+@media (max-width: 767px) {
+    .news-article {
+        padding: 60px 20px 0 20px; /* якщо хедер на мобілках трохи менший */
+    }
+}
