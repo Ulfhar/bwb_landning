@@ -6,17 +6,14 @@ body {
     margin: 0;
 }
 
-
-
 .news-article {
     max-width: 800px;
     margin: 0 auto;
     padding: 80px 20px 0 20px;
 }
 
-
 .news-meta {
-    color: #6a1b9a; /* фіолетовий */
+    color: #6a1b9a;
     font-family: 'Roboto Serif', serif;
     font-size: 0.9rem;
     letter-spacing: 0.05em;
@@ -60,13 +57,23 @@ body {
         aspect-ratio: 1 / 1;
         object-fit: cover;
         border-radius: 10px;
+        cursor: pointer;
     }
 
-    .news-image figcaption {
-        font-size: 0.85rem;
-        color: #555;
-        margin-top: 5px;
-    }
+.news-image-original-ratio img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    aspect-ratio: auto;
+    cursor: pointer;
+}
+
+.news-image figcaption {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 5px;
+}
 
 .news-content {
     margin: 20px 0;
@@ -96,6 +103,80 @@ body {
 
 @media (max-width: 767px) {
     .news-article {
-        padding: 60px 20px 0 20px; /* якщо хедер на мобілках трохи менший */
+        padding: 60px 15px 0 15px;
+    }
+
+    .news-title {
+        font-size: 1.5rem;
+    }
+
+    .news-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .news-meta {
+        font-size: 0.85rem;
+    }
+
+    .news-image img {
+        max-width: 100%;
+    }
+
+    .news-image-original-ratio img {
+        max-width: 100%;
+    }
+
+    .news-content blockquote {
+        font-size: 1rem;
+        margin: 15px;
+        padding: 10px 15px;
+    }
+}
+
+/* Стилі для lightbox */
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+    .image-modal-content:hover {
+        transform: scale(1.02);
+    }
+
+.image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

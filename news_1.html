@@ -8,6 +8,55 @@
     <link rel="stylesheet" href="css/news.css" />
     <link rel="stylesheet" href="/css/header.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+            .image-modal-content:hover {
+                transform: scale(1.02);
+            }
+
+        .image-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +82,7 @@
 
         <p class="news-subtitle">The release date is set, and each day brings us closer to the forest's secrets.</p>
 
-        <figure class="news-image">
+        <figure class="news-image news-image-original-ratio">
             <img src="images/news_1.png" alt="Illustration of the game atmosphere" />
             <figcaption>Up and Forward!</figcaption>
         </figure>
@@ -60,12 +109,36 @@
             <blockquote>“And hey, I’m sure you’ve got something to say too. So let me know your thoughts on <a href="https://x.com/Far_Far_Forest" target="_blank">Twitter</a>!”</blockquote>
         </section>
 
-
-
         <section class="news-video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/aEaU5J_0gxc" frameborder="0" allowfullscreen></iframe>
         </section>
     </article>
-</body>
 
+    <!-- Модальне вікно для збільшення зображень -->
+    <div id="image-modal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="image-modal-content" />
+    </div>
+
+    <script>
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("image-modal-content");
+        const closeBtn = document.querySelector(".image-modal-close");
+
+        document.querySelectorAll(".news-image img").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+            });
+        });
+
+        closeBtn.onclick = () => {
+            modal.style.display = "none";
+        };
+
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        };
+    </script>
+</body>
 </html>

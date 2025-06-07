@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Far-Far-Forest – DevLog #1</title>
+    <link rel="stylesheet" href="css/news.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <script>
+        fetch("../header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            });
+    </script>
+
+    <article class="news-article">
+        <div class="news-meta">
+            <p class="news-date">Jun 7, 2025</p>
+            <p class="news-type">DevLog – reflections</p>
+            <p class="news-author">
+                <a href="https://x.com/Far_Far_Forest" target="_blank">Twitter/X - @Far_Far_Forest</a>
+            </p>
+        </div>
+
+        <h1 class="news-title">DevLog #1: Achievements and Lore</h1>
+
+        <p class="news-subtitle"><em>Reminder: you’re reading a DevLog — thoughts and reflections from the developer of Far-Far Forest. No AI or GMO — just hand-made.</em></p>
+
+        <section class="news-content">
+            <p>Your game — your achievements. Has a nice ring to it, doesn’t it?</p>
+            <p>Looking back, the decision to create my own achievement system was pretty spontaneous.</p>
+            <p>For some reason, I just didn’t like the default Play Market achievements — too monotonous, too boring.</p>
+            <p>Besides, it seemed like a fairly simple task I could complete quickly to take a short break from level design and focus on something else.</p>
+            <p>And for once, my estimate turned out to be spot on (that doesn’t happen often, does it?).</p>
+            <p>So what do we have now?</p>
+
+            <figure class="news-image news-image-original-ratio">
+                <img src="images/ach_menu.png" alt="Achievements menu in Far-Far-Forest" />
+                <figcaption>A new row in the menu</figcaption>
+            </figure>
+
+            <p>First of all, my own flexible system with two types of achievements: ones that you need to accumulate to unlock, and ones that are granted immediately.</p>
+            <p>The pop-ups turned out quite charming, and the overall design fits perfectly with the game’s atmosphere.</p>
+
+            <figure class="news-image news-image-original-ratio">
+                <img src="images/ach_screen.png" alt="Achievement screen with details" />
+                <figcaption>Now it looks so. First one in the list with a green progress bar</figcaption>
+            </figure>
+
+            <p>I also had an idea: what if, when you unlocked an achievement, you’d get a little piece of the world’s lore?</p>
+            <p>Because believe me — there’s so much to tell!</p>
+            <p>But I couldn’t find a convenient or intuitive way to pull it off.</p>
+            <p>I thought about adding it to the description, but since you can read that even without unlocking the achievement, the idea fell apart.</p>
+
+            <p>A few words about the lore — and the pain that comes with it.</p>
+            <p>I don’t know how to share it with you!</p>
+            <p>Or rather, I don’t know how to do it the way I want.</p>
+            <p>Because this text is for the “chosen ones,” those who are truly interested — so I’ll reveal a few cards (God, how that word sounds so filthy in the context of recent events).</p>
+
+            <blockquote>
+                In the Far-Far Forest, full of wonders and magic, there once lived a King — the Wise Oak.<br><br>
+                His rule was honest and just, yet, as it often goes, not everyone shared his virtues. Even in a fairy tale.<br><br>
+                Deep in the woods, beneath the mountain, grew the one whose cunning and bitterness brought an end to the ancient order.<br><br>
+                There is no more Oak — Chestnut now reigns. And those who could still stand against his evil will are no more.<br><br>
+                Little fireflies, who once gifted their light and strength to the Wise Ruler, now hide from the tyrant’s minions — the forest shadows, echoes of a life long past. They’re snatched into ancient lanterns and thrown without will under the roots of the Father of Thorny Fruits — the Great Chestnut.<br><br>
+                How long will this silent oppression of Evil Will last? Yes, far too long.<br>
+                Will it last forever? No, for a new Light has already been born that will overcome the Darkness.
+            </blockquote>
+
+            <p>This is just a fragment of the story that’s bursting to be told, and I have to find a way to share it with you.</p>
+            <p>I don’t want to shove it in your face, but I don’t want to hide it away completely either.</p>
+            <p>Anyway, this was supposed to be a text about achievements, and I got a little carried away.</p>
+            <p>But what else is there to say?</p>
+            <p>They’re here.</p>
+            <p>I made them the way I saw fit — and that’s already something.</p>
+            <p>Now I’m waiting for your feedback.</p>
+        </section>
+    </article>
+
+    <div id="image-modal" class="image-modal">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="image-modal-content" />
+    </div>
+
+    <script>
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("image-modal-content");
+        const closeBtn = document.querySelector(".image-modal-close");
+
+        document.querySelectorAll(".news-image img").forEach(img => {
+            img.addEventListener("click", () => {
+                modal.style.display = "flex";
+                modalImg.src = img.src;
+            });
+        });
+
+        closeBtn.onclick = () => {
+            modal.style.display = "none";
+        };
+
+        // Клік по фону або по самому зображенню — закриває
+        modal.onclick = () => {
+            modal.style.display = "none";
+        };
+    </script>
+</body>
+
+</html>
